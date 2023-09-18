@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+#branding-placeholder {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #000000;
+}
+
+#text-placeholder {
+  font-size: 1rem;
+  color: #333333;
+}
