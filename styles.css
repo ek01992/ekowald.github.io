@@ -18,11 +18,6 @@ body {
   background-color: #f2f2f2;
 }
 
-#branding-placeholder {
-  font-size: 1.5rem;
-  color: #333333;
-}
-
 .content {
   text-align: center;
 }
@@ -30,9 +25,4 @@ body {
 .content h1 {
   font-size: 3rem;
   color: #000000;
-}
-
-#text-placeholder {
-  font-size: 1rem;
-  color: #333333;
 }
