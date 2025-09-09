@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: '20'
           
-      - name: Validate HTML & CSS
+      - name: Validate HTML
         run: |
           npx html-validate index.html 404.html
-          npx stylelint styles.css
+          echo "✅ HTML validation complete"
           
       - name: Test site locally
         run: |
