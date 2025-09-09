@@ -1,0 +1,37 @@
+name: Dev - Validate & Test
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [dev]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: ./
+          
+      - name: Validate CSS
+        run: |
+          npm install -g css-validator
+          css-validator styles.css
+          
+      - name: Check file structure
+        run: |
+          test -f index.html || exit 1
+          test -f styles.css || exit 1
+          test -f CNAME || exit 1
+          test -f apple-touch-icon.png || exit 1
+          test -f favicon-32x32.png || exit 1
+          test -f favicon-16x16.png || exit 1
+          test -f site.webmanifest || exit 1
+          test -f 404.html || exit 1
+          test -f android-chrome-192x192.png || exit 1
+          test -f android-chrome-512x512.png || exit 1
+          test -f favicon.ico || exit 1
+          echo "✅ All required files present"
